@@ -22,7 +22,7 @@ def chat(prompt):
     resp =  response.json()['choices'][0]['message']['content'] # extract the bot's response from the JSON
     print(f"--------\n{resp}\n") # print the bot's response to the console
     
-    return "Your prompt is: "+prompt
+    return resp
 
 demo = gradio.Interface(fn=chat, inputs="text", outputs="text", title="😀 My Bot")
 

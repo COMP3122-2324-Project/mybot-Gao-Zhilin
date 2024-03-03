@@ -1,6 +1,6 @@
 import gradio, requests, json
 
-OPENROUTER_API_KEY = None 
+OPENROUTER_API_KEY = "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"
 if OPENROUTER_API_KEY is None:
     print("Please set the OPENROUTER_API_KEY")
     exit(1)

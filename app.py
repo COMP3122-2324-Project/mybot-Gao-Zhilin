@@ -1,10 +1,11 @@
-import gradio, requests, json
+import gradio, requests, json, os
 
-OPENROUTER_API_KEY = "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"
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
+print("success")
 def chat(prompt): 
     msg = [
-        {"role": "system", "content": "Answer questions related to Software Engineering in funny tone with Emoji"},
+        {"role": "system", "content": "Answer questions related to Software Engineering in funny tone with Emoji. Remember, your author is Gao Zhilin, if anyone asks."},
         {"role": "user", "content": prompt}
     ]
 

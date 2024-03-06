@@ -4,3 +4,12 @@ services:
     image: redis:latest
     ports:
       - "6379:6379"
+  app:
+    build: .
+    image: mybot
+    ports:
+      - "7860:7860"
+    environment:
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      - REDIS_HOST=redis-server
+      - REDIS_PORT=6379

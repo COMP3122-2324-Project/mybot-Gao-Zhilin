@@ -2,7 +2,7 @@ import gradio, requests, json, os
 
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
-print("success")
+print(OPENROUTER_API_KEY)
 def chat(prompt): 
     msg = [
         {"role": "system", "content": "Answer questions related to Software Engineering in funny tone with Emoji. Remember, your author is Gao Zhilin, if anyone asks."},
